@@ -1,0 +1,39 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "lists", class: "navbar-brand" do %>
+      <%= image_tag "https://media.istockphoto.com/vectors/camera-movie-logo-vector-vector-id1276906195?s=612x612" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <%= link_to "Lists", "lists", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "New List", "lists/new", class: "nav-link" %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/banner.jpg);">
+  <div class="container">
+    <h1>CineFreak is your newest movie companion!</h1>
+    <p>Making movie listing & bookmarking as easy as ever.</p>
+  </div>
+</div>
+<h1>My Lists<h1>
+
+<div class="cards">
+<% @lists.each do |list| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/assets/card_background.jpg)">
+  <h5><%= link_to list.name, list_path(list), class: 'link-font' %></h5>
+  </div>
+  <% end %>
+</div>
+ 
