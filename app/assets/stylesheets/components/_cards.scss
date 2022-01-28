@@ -14,6 +14,16 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
+  .card-large {
+    height: 50vh;
+    width: 100vmax;
+  }
+
+  .card-img-top {
+    object-fit: fill;
+    object-position: center;
+  }
+
 .link-font {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: white;
